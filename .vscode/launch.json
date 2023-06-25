@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "training",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT":"5"
+            },
+            //传递给程序一些参数
+            "args": [
+                "--base",
+                "config\\autoencoder\\autoencoder_k1_64x64x3.yaml",
+                "-t",
+                "--gpus",
+                "0"
+            ]
+        }
+
+    ]
+}
